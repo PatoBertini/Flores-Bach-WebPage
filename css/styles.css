@@ -1,0 +1,266 @@
+@import url("https://fonts.googleapis.com/css2?family=Koulen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Koulen&family=Parisienne&family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Delius+Unicase&family=Forum&family=Koulen&family=Montserrat:wght@100&family=Parisienne&family=Questrial&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.p-t {
+  font-size: 1.8em;
+  font-family: "montserrat";
+  color: black;
+  opacity: 0.6;
+  font-weight: bold;
+}
+
+p.titulo {
+  font-size: 5.5em;
+  font-family: "montserrat";
+  color: black;
+  font-weight: bold;
+  opacity: 0.8;
+}
+
+h1 {
+  font-size: 10em;
+  font-family: "parisienne";
+}
+
+/*-------------------------- HEADER Y NAV --------------------------*/
+
+header .h-container {
+  display: flex;
+  background-color: #edc26d;
+}
+
+ul li {
+  list-style: none;
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+  width: 90%;
+  margin: auto;
+  padding: 15px 15px;
+  font-size: 1.7em;
+  font-weight: bolder;
+  margin-top: -50px;
+  font-family: "montserrat";
+  margin-top: -50px;
+}
+
+.nav ul li::before {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: black;
+  position: absolute;
+  left: 0;
+  bottom: 1px;
+  transition: 0.4s ease-out;
+}
+
+.nav ul li:hover::before {
+  width: 95%;
+}
+
+.opacity {
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.opacity:hover {
+  opacity: 1;
+}
+
+/*-------------------------- HERO --------------------------*/
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  /* BUEN CODIGO PARA IMAGENES DE HERO */
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../images/flor2.jpeg");
+  color: rgb(171, 155, 63);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+#hero .b-hero {
+  width: 230px;
+  height: 50px;
+  position: relative;
+  font-size: 1.5em;
+  color: white;
+  font-weight: bold;
+  border: 2px solid grey;
+  background-color: transparent;
+  font-family: "montserrat";
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgb(215, 215, 215);
+  transition: all 1s ease;
+}
+
+.b-hero:hover {
+  color: black;
+  background-color: rgb(48, 71, 36);
+  opacity: 0.5;
+  animation: 1s ms 1;
+}
+
+#hero button a {
+  text-decoration: none;
+  color: white;
+  /* transition: all 1s ease; */
+}
+
+#hero button a:hover {
+  color: black;
+}
+
+/*-------------------------- CONTAINER DE QUE ES LA TERAPIA FLORAL --------------------------*/
+
+
+#terapia .container {
+  max-width: 100%;
+  text-align: center;
+  justify-content: center;
+  background: #f8ecd1;
+  display: flex;
+}
+
+#terapia .texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  padding: 60px;
+
+}
+
+#terapia .img-container {
+  background-image: url(../images/bach2.jpeg);
+  background-size: cover;
+  background-position: center center;
+  height: 500px;
+  width: 600px;
+  border-radius: 60%;
+  margin: auto;
+  margin-right: 40px;
+}
+
+/*-------------------------- PRESENTACIÓN LUCY --------------------------*/
+
+#presentacion {
+  background-color: #f2ddc1;
+  color: black;
+}
+
+.luli {
+  width: 100%;
+  padding: 5px;
+}
+
+h2 {
+  font-size: 4em;
+  font-family: "montserrat";
+  font-weight: bold;
+  text-align: center;
+}
+
+.p-l {
+  font-size: 3em;
+  font-family: "montserrat";
+  text-align: center;
+}
+
+img {
+}
+
+.texto {
+  padding: 50px 10px;
+}
+
+.foto1 {
+  width: 600px;
+  height: 600px;
+  display: flex;
+  padding: 25px;
+}
+
+.foto1 img {
+  padding: 5px;
+  margin: 15px;
+}
+
+/*-------------------------- FOOTER --------------------------*/
+
+.f-container {
+  height: 700px;
+  width: 100%;
+  border: 1px solid black;
+  background-color: #dfcaaf;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: auto auto;
+  grid-template-areas: 
+  "text vid"
+  "der der"
+  ;
+}
+
+.video {
+  grid-area: vid;
+  border: 3px solid black;
+}
+
+.derechos {
+  grid-area: der;
+  justify-content: center;
+  justify-items: center;
+  border: 3px black solid;
+  padding: 15px;
+  width: 100%;
+}
+
+.f-text {
+  grid-area: text;
+  font-size: 4em;
+  font-family: "montserrat";
+  font-weight: bold;
+  width: 100%;
+  justify-content: center;
+  color: white;
+  border: 3px black solid;
+}
